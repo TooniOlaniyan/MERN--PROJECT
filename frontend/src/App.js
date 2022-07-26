@@ -7,6 +7,8 @@ import Register from './pages/Register'
 //Component !=Pages
 
 import Header from './component/Header'
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
       <Route path='/login' element={<Login/>}/>
     </Routes>
    </Router>
+   <ToastContainer/>
    </>
   );
 }

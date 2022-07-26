@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken')
 const User = require('../models/userModel')
 const bcrypt = require('bcryptjs')
 const asyncHandler = require('express-async-handler')
+
 const registerUser = asyncHandler( async(req , res) =>  {
     const {name , email , password} = req.body
     if(!name || !email || !password){
@@ -56,7 +57,7 @@ const loginUser =asyncHandler( async (req , res) => {
         })
     }else{
         res.status(401)
-        throw new Error('ivalid credentials, try check am boss')
+        throw new Error('invalid credentials, try check am boss')
         
     }
 

@@ -47,7 +47,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px;
   border-bottom: 1px solid #e6e6e6;
   margin-bottom: 60px;
 }
@@ -80,10 +80,15 @@ h3 {
   font-weight: 700;
   margin-bottom: 50px;
   padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .heading p {
   color: #828282;
+  text-align: center;
 }
 
 .boxes {
@@ -402,5 +407,8 @@ footer {
 
   .heading p {
     font-size: 1.5rem;
+  }
+  .heading h1{
+    text-align: center;
   }
 }
