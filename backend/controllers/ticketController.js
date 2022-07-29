@@ -35,7 +35,7 @@ const getTicket = aysncHandler(async(req , res) => {
 
 
 //create new tickets
-const createTickets = aysncHandler(async(req , res) => {
+const createTicket = aysncHandler(async(req , res) => {
     const {product , description} = req.body
     if(!product || !description){
         res.status(400)
@@ -50,7 +50,7 @@ const createTickets = aysncHandler(async(req , res) => {
     const ticket = Ticket.create({
         product,
         description,
-        usrt: req.user.id,
+        user: req.user.id,
         status: 'new'
     })
     res.status(201).json(ticket)
@@ -103,7 +103,7 @@ const updateTicket = aysncHandler(async(req , res) => {
 
 module.exports = {
     getTickets,
-    createTickets,
+    createTicket,
     getTicket , 
     deleteTicket,
     updateTicket

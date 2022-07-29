@@ -28,6 +28,7 @@ const getTickets = async (token) => {
     const response = await axios.get(API_URL , config)
     
     return response.data
+    console.log(response)
 }
 
 const ticketService = {
